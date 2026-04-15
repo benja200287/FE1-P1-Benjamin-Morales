@@ -7,29 +7,42 @@ body {
 }
 
 .section {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    background-color: #fff;
+    padding: 32px 24px;
+    margin: 32px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    max-width: 900px;
+}
+
+.section h2 {
+    color: #007BFF;
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 .section p {
     color: #666;
-    font-size: 1.1em;
-    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 24px;
 }
 
 .card {
     background-color: #007BFF;
     color: #fff;
     padding: 24px 16px;
-    margin: 0;
     border-radius: 12px;
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,6 +50,7 @@ body {
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
+    font-size: 1.1em;
 }
 .card:hover {
     transform: translateY(-8px) scale(1.03);
@@ -56,4 +70,21 @@ footer {
     font-size: 1em;
     letter-spacing: 1px;
     box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+    z-index: 100;
+}
+
+@media (max-width: 700px) {
+    .section {
+        padding: 20px 8px;
+    }
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .card {
+        width: 90vw;
+        height: 160px;
+        font-size: 1em;
+    }
 }
